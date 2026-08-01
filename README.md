@@ -39,4 +39,4 @@ row, global search hidden (use CTRL+K).
 ### Firefox? 
 > You are looking for [FoxOne!](https://github.com/Firnschnee/FoxOne)
 ---
-Concept inspired by [@NeroWolfe75's](https://github.com/NeroWolfe75) [one-line experiment](https://www.reddit.com/r/Thunderbird/comments/15klzpr/oneliner_for_thunderbird/)| License: [MIT](LICENSE)
+Concept inspired by [@NeroWolfe75's](https://github.com/NeroWolfe75) [one-line experiment from 2023](https://www.reddit.com/r/Thunderbird/comments/15klzpr/oneliner_for_thunderbird/) | License: [MIT](LICENSE)
