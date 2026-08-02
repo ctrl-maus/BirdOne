@@ -1,3 +1,10 @@
+---
+layout: default
+title: Customisation
+---
+
+# Customisation
+
 All knobs live at the top of `userChrome.css`:
 
 | Variable | Default | Effect |
