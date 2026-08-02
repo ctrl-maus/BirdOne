@@ -7,6 +7,12 @@ row, global search hidden (use CTRL+K).
 
 ![preview](https://github.com/Firnschnee/BirdOne/blob/main/assets/preview.png)
 
+> This project has two branches:
+> 
+> `main` with the custom gruvbox colors from FoxOne  
+> 
+> `One` &nbsp; without the custom colors - just the layout
+
 ### Features
 
 >- Tab bar and unified toolbar merged into one row: tabs on the left, toolbar buttons on the right, next to the window controls
