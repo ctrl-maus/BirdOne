@@ -11,44 +11,92 @@
 <meta property="og:image" content="https://firnschnee.github.io/BirdOne/assets/preview.png">
 <meta property="og:url" content="https://firnschnee.github.io/BirdOne/">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1b1815">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preload" as="font" type="font/woff2" href="fonts/InstrumentSans-02.woff2" crossorigin>
+<link rel="stylesheet" href="fonts/InstrumentSans.css">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
-<body class="landing">
+<body>
 
-<main class="landing-main">
-
-<section class="hero">
-  <h1>BirdOne</h1>
-  <p class="tagline">One-line layout for Thunderbird: tabs and unified toolbar in a single row, responsive down to 850px window width. Tested on Thunderbird 152 (Supernova UI, 115+ required) on Windows.</p>
-  <div class="buttons">
-    <a class="btn btn-primary" href="installation.html">Installation</a>
-    <a class="btn" href="customisation.html">Customisation</a>
-    <a class="btn" href="action.html">See it in action</a>
-    <a class="btn" href="https://github.com/Firnschnee/BirdOne">GitHub</a>
-    <a class="btn" href="https://firnschnee.github.io/FoxOne/">Want it for Firefox?</a>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="./">birdone</a>
+    <nav class="topnav" aria-label="Pages">
+      <a href="installation.html">installation</a>
+      <a href="customisation.html">customisation</a>
+      <a href="action.html">in action</a>
+      <a href="https://github.com/Firnschnee/BirdOne">github</a>
+    </nav>
+    <span class="badge">amber</span>
   </div>
-</section>
+</header>
 
-<div class="preview">
-  <img src="assets/preview.png" alt="BirdOne preview: Thunderbird with tabs and unified toolbar in a single row">
-</div>
+<main id="main">
 
-<section class="feature">
-  <h2>One line for everything</h2>
-  <p>BirdOne merges the Thunderbird tab bar and unified toolbar into a single row: tabs on the left, toolbar buttons on the right, next to the window controls. The chrome shrinks to one line, and your mail gets the vertical space back. Below 850px window width the layout falls back to the default two-row interface, so a narrow window stays usable.</p>
-  <h2>Layout, not a colour scheme</h2>
-  <p>BirdOne is being reduced to what it does best. The former amber accent and the surface greys are switched off: colour in Thunderbird is less a CSS problem than a design one, and a half-applied palette is worse than none at all. What remains is a quiet grey for the message list. The old rules are still in the file, commented out, while the question is being decided.</p>
-  <h2>Pure userChrome.css</h2>
-  <p>The whole theme is one <code>userChrome.css</code> stylesheet – no extension, no background process, nothing phoning home, and every knob is a CSS variable at the top of the file. A companion <code>userContent.css</code> is in the repository but currently not recommended: it still carries the colour layer that the main stylesheet no longer applies.</p>
-</section>
+  <!-- ============ MASTHEAD ============ -->
+  <section class="mast wrap" aria-label="BirdOne masthead">
+    <div class="rule" aria-hidden="true"></div>
+    <h1 class="m-title"><span class="m-clip"><span class="m-line">birdone<i class="dot" aria-hidden="true"></i></span></span></h1>
+    <div class="m-sub g">
+      <div class="m-langs">
+        <p class="m-clip"><span class="m-line l-1">one line for everything</span></p>
+        <p class="m-clip"><span class="m-line l-2">tabs and unified toolbar in a single row</span></p>
+        <p class="m-clip"><span class="m-line l-3">layout only · no extensions · nothing phoning home</span></p>
+      </div>
+      <div class="m-meta">
+        <p class="m-lead">userchrome.css</p>
+        <p>thunderbird 115+ · supernova ui</p>
+        <p>tested on 152 · windows</p>
+        <p class="m-dim">mit license · free and open source</p>
+      </div>
+    </div>
+    <div class="m-cta">
+      <a class="btn" href="installation.html">installation</a>
+      <a class="btn btn--ghost" href="https://github.com/Firnschnee/BirdOne">github repo</a>
+      <a class="btn btn--ghost" href="https://firnschnee.github.io/FoxOne/">firefox? foxone</a>
+    </div>
+  </section>
+
+  <!-- ============ PREVIEW ============ -->
+  <div class="preview wrap">
+    <figure class="frame">
+      <img src="assets/preview.png" width="1560" height="340" alt="BirdOne preview: Thunderbird with tabs and unified toolbar in a single row">
+    </figure>
+  </div>
+
+  <!-- ============ THE THEME ============ -->
+  <section class="essay wrap" id="theme" aria-labelledby="h-theme">
+    <h2 id="h-theme"><span>the theme</span> <span class="en">– one line for everything</span></h2>
+    <div class="g essay-g">
+      <div class="col-a">
+        <p>BirdOne merges the Thunderbird tab bar and unified toolbar into a single row: tabs on the left, toolbar buttons on the right, next to the window controls. The chrome shrinks to one line, and your mail gets the vertical space back.</p>
+        <p>Below 850px window width the layout falls back to the default two-row interface, so a narrow window stays usable.</p>
+      </div>
+      <div class="col-b">
+        <p>The whole theme is one <code>userChrome.css</code> stylesheet – no extension, no background process, nothing phoning home, and every knob is a CSS variable at the top of the file.</p>
+        <p>BirdOne is being reduced to what it does best: layout, not a colour scheme. The former amber accent and the surface greys are switched off – what remains is a quiet grey for the message list. A companion <code>userContent.css</code> is in the repository but currently not recommended.</p>
+      </div>
+    </div>
+  </section>
 
 </main>
 
-<footer class="site-footer">
-  <p>Released under the <a href="https://github.com/Firnschnee/BirdOne/blob/main/LICENSE">MIT License</a>.
-  Concept inspired by <a href="https://www.reddit.com/r/Thunderbird/comments/15klzpr/oneliner_for_thunderbird/">NeroWolfe_'s one-line experiment</a>.</p>
+<footer class="foot">
+  <div class="wrap g">
+    <p class="f-mark">birdone <span class="f-sep">·</span> one line <span class="f-sep">·</span> thunderbird</p>
+    <div class="f-col">
+      <p>BirdOne is released under the <a href="https://github.com/Firnschnee/BirdOne/blob/main/LICENSE">MIT License</a>. Concept inspired by <a href="https://www.reddit.com/r/Thunderbird/comments/15klzpr/oneliner_for_thunderbird/">NeroWolfe_'s one-line experiment</a>.</p>
+      <p>Also themed for Firefox: <a href="https://firnschnee.github.io/FoxOne/">FoxOne</a>.</p>
+    </div>
+    <div class="f-col">
+      <p>This site is set in a single grotesque on twelve columns and a 24-pixel baseline.</p>
+      <p class="f-fine">© 2026 firnschnee · birdone</p>
+    </div>
+  </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>

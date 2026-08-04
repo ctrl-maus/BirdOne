@@ -6,29 +6,50 @@
 <title>{{ page.title }} – BirdOne</title>
 <meta name="description" content="{{ site.description }}">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta name="theme-color" content="#1b1815">
 <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+<link rel="preload" as="font" type="font/woff2" href="{{ '/fonts/InstrumentSans-02.woff2' | relative_url }}" crossorigin>
+<link rel="stylesheet" href="{{ '/fonts/InstrumentSans.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-<header class="site-header">
-  <a class="brand" href="{{ '/' | relative_url }}">BirdOne</a>
-  <nav class="nav-links">
-    <a href="{{ '/installation.html' | relative_url }}">Installation</a>
-    <a href="{{ '/customisation.html' | relative_url }}">Customisation</a>
-    <a href="{{ '/action.html' | relative_url }}">In Action</a>
-    <a href="https://github.com/Firnschnee/BirdOne">GitHub</a>
-  </nav>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="{{ '/' | relative_url }}">birdone</a>
+    <nav class="topnav" aria-label="Pages">
+      <a href="{{ '/installation.html' | relative_url }}">installation</a>
+      <a href="{{ '/customisation.html' | relative_url }}">customisation</a>
+      <a href="{{ '/action.html' | relative_url }}">in action</a>
+      <a href="https://github.com/Firnschnee/BirdOne">github</a>
+    </nav>
+    <span class="badge">amber</span>
+  </div>
 </header>
 
-<main class="content">
+<main class="doc-main wrap" id="main">
+  <div class="g">
+    <article class="doc">
 {{ content }}
+    </article>
+  </div>
 </main>
 
-<footer class="site-footer">
-  <p>Released under the <a href="https://github.com/Firnschnee/BirdOne/blob/main/LICENSE">MIT License</a>.
-  Concept inspired by <a href="https://www.reddit.com/r/Thunderbird/comments/15klzpr/oneliner_for_thunderbird/">NeroWolfe_'s one-line experiment</a>.</p>
+<footer class="foot">
+  <div class="wrap g">
+    <p class="f-mark">birdone <span class="f-sep">·</span> one line <span class="f-sep">·</span> thunderbird</p>
+    <div class="f-col">
+      <p>BirdOne is released under the <a href="https://github.com/Firnschnee/BirdOne/blob/main/LICENSE">MIT License</a>. Concept inspired by <a href="https://www.reddit.com/r/Thunderbird/comments/15klzpr/oneliner_for_thunderbird/">NeroWolfe_'s one-line experiment</a>.</p>
+      <p>Also themed for Firefox: <a href="https://firnschnee.github.io/FoxOne/">FoxOne</a>.</p>
+    </div>
+    <div class="f-col">
+      <p>This site is set in a single grotesque on twelve columns and a 24-pixel baseline.</p>
+      <p class="f-fine">© 2026 firnschnee · birdone</p>
+    </div>
+  </div>
 </footer>
 
+<script src="{{ '/js/main.js' | relative_url }}"></script>
 </body>
 </html>
