@@ -7,13 +7,11 @@ row, global search hidden (use CTRL+K).
 
 ![preview](https://github.com/Firnschnee/BirdOne/blob/main/assets/preview.png)
 
-
 ### Features
 
 >- Tab bar and unified toolbar merged into one row: tabs on the left, toolbar buttons on the right, next to the window controls
 >- Responsive: below 850px window width the layout falls back to the default two-row interface
 >- Square popup corners: no rounded inner corners in context menus and panels
-
 
 ### Installation
 >
