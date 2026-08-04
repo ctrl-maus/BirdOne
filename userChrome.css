@@ -1,10 +1,15 @@
 /*==============================================================================================*
 
-  BirdOne 1.4.1 – A one-line layout for Thunderbird
+  BirdOne 1.4.2 – A one-line layout for Thunderbird
   https://github.com/Firnschnee/BirdOne
   Concept inspired by NeroWolfe_'s one-line experiment
   Tested: Thunderbird 152 (Supernova UI, 115+)
   MIT License
+
+  WORK IN PROGRESS
+  BirdOne is being reduced to layout only. The color layer (blocks 4 to 21)
+  is commented out and kept for reference, not deleted. Only the layout
+  variables and the greys of blocks 22 to 25 are still active.
 
 *==============================================================================================*/
 

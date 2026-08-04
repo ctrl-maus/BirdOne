@@ -1,10 +1,17 @@
 /*==============================================================================================*
 
-  BirdOne 1.4.1 – Companion sheet for message content
+  BirdOne 1.4.2 – Companion sheet for message content
   https://github.com/Firnschnee/BirdOne
   Colors the mail body and compose editor (content documents), which userChrome.css cannot reach.
   Tested: Thunderbird 152 (Supernova UI, 115+)
   MIT License
+
+  WORK IN PROGRESS – CURRENTLY NOT RECOMMENDED
+  This sheet still applies the color layer that userChrome.css no longer
+  does. Installed alongside the current userChrome.css it pins mail body,
+  compose editor and the settings page to a grey the rest of the interface
+  no longer uses. BirdOne works without this file. Kept in the repository
+  while the color question is being decided.
 
 *==============================================================================================*/
 
