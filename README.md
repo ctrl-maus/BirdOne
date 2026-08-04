@@ -7,22 +7,13 @@ row, global search hidden (use CTRL+K).
 
 ![preview](https://github.com/Firnschnee/BirdOne/blob/main/assets/preview.png)
 
-> This project has two branches:
-> 
-> `main` with the custom gruvbox colors from FoxOne  
-> 
-> `One` &nbsp; without the custom colors - just the layout
 
 ### Features
 
 >- Tab bar and unified toolbar merged into one row: tabs on the left, toolbar buttons on the right, next to the window controls
 >- Responsive: below 850px window width the layout falls back to the default two-row interface
->- Fixed amber accent (`#fabd2f`) decoupled from the Windows accent colour – selection highlights, primary button and focus rings stayamber regardless of the OS setting
->- Colour as signal (dark mode): context menus, app menu, toolbar icons, column headers, recipient pills and compose-window controls answer hover with amber text/icons instead of a background block.
->- Message list selection, the "New Message" button and the header/compose toolbar buttons use a subtle amber tint with a 1px amber outline instead of a solid amber block
 >- Square popup corners: no rounded inner corners in context menus and panels
->- Window controls (dark mode): minimize/maximize hover in amber glyph colour instead of a grey block; close keeps the Windows close-red, as glyph colour instead of a red block
->- One surface grey (dark mode): folder pane, message list, reading pane and the dark-reader mail body share a single grey (`#282828`, `--birdone-surface`) instead of the mixed near-black defaults
+
 
 ### Installation
 >
