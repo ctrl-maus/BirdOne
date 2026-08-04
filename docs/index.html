@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BirdOne – minimalistic one-line userChrome.css theme for Thunderbird</title>
-<meta name="description" content="BirdOne merges the Thunderbird tab bar and unified toolbar into a single line. A minimalistic userChrome.css theme with an amber accent, no extensions required.">
+<meta name="description" content="BirdOne merges the Thunderbird tab bar and unified toolbar into a single line. A minimalistic userChrome.css layout theme, no extensions required.">
 <link rel="canonical" href="https://firnschnee.github.io/BirdOne/">
 <meta property="og:title" content="BirdOne – one-line userChrome.css theme for Thunderbird">
-<meta property="og:description" content="Thunderbird tabs and unified toolbar in a single line. Amber accent, one calm surface grey.">
+<meta property="og:description" content="Thunderbird tabs and unified toolbar in a single line. Layout only, no extensions required.">
 <meta property="og:image" content="https://firnschnee.github.io/BirdOne/assets/preview.png">
 <meta property="og:url" content="https://firnschnee.github.io/BirdOne/">
 <meta name="twitter:card" content="summary_large_image">
@@ -20,7 +20,7 @@
 
 <section class="hero">
   <h1>BirdOne</h1>
-  <p class="tagline">One-line layout for Thunderbird: tabs and unified toolbar in a single row, a fixed amber accent instead of the Windows colours & one calm surface grey. Tested on Thunderbird 152+.</p>
+  <p class="tagline">One-line layout for Thunderbird: tabs and unified toolbar in a single row, responsive down to 850px window width. Tested on Thunderbird 152+.</p>
   <div class="buttons">
     <a class="btn btn-primary" href="installation.html">Installation</a>
     <a class="btn" href="customisation.html">Customisation</a>
@@ -37,10 +37,10 @@
 <section class="feature">
   <h2>One line for everything</h2>
   <p>BirdOne merges the Thunderbird tab bar and unified toolbar into a single row: tabs on the left, toolbar buttons on the right, next to the window controls. The chrome shrinks to one line, and your mail gets the vertical space back. Below 850px window width the layout falls back to the default two-row interface, so a narrow window stays usable.</p>
-  <h2>Colour as signal</h2>
-  <p>A fixed amber accent replaces the Windows accent colour: selection highlights, the primary button and focus rings stay amber regardless of the OS setting. In dark mode, menus, toolbar icons, column headers and compose controls answer hover with amber text instead of a background block, and the message list selection uses a subtle tint with a thin amber outline.</p>
+  <h2>Layout, not a colour scheme</h2>
+  <p>BirdOne is being reduced to what it does best. The former amber accent and the surface greys are switched off: colour in Thunderbird is less a CSS problem than a design one, and a half-applied palette is worse than none at all. What remains is a quiet grey for the message list. The old rules are still in the file, commented out, while the question is being decided.</p>
   <h2>Pure userChrome.css</h2>
-  <p>The whole theme is one <code>userChrome.css</code> stylesheet plus an optional <code>userContent.css</code> for the mail body and compose editor – no extension, no background process, nothing phoning home. Folder pane, message list and reading pane share a single surface grey, and every knob is a CSS variable at the top of the file.</p>
+  <p>The whole theme is one <code>userChrome.css</code> stylesheet – no extension, no background process, nothing phoning home, and every knob is a CSS variable at the top of the file. A companion <code>userContent.css</code> is in the repository but currently not recommended: it still carries the colour layer that the main stylesheet no longer applies.</p>
 </section>
 
 </main>
