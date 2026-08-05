@@ -717,3 +717,28 @@ unified-toolbar {
     border-block-end-color: transparent !important;
   }
 }
+
+/* --------------------------------------------------------------------------
+Moving attachment panel to the top between Message header and Message body.
+Moreover, if you want to make attachments more visible just set mailnews.attachments.display.start_expanded = true
+and attachment panel will be extented by default.
+----------------------------------------------------------------------------*/
+#messagepanebox {
+  display: flex !important;
+  flex-direction: column !important;
+}
+#msgHeaderView {
+  order: 0 !important;
+}
+#attachmentView {
+  order: 1 !important;
+  max-height: 160px !important;
+  overflow: auto !important;
+}
+#messagebrowser,
+#messageContent,
+#messagepane {
+  order: 2 !important;
+  flex: 1 1 auto !important;
+  min-height: 100px !important;
+}
