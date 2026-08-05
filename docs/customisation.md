@@ -17,6 +17,12 @@ All knobs live at the top of `userChrome.css`:
 | `--birdone-row-height` | `34px` | Height of the combined row |
 | `--birdone-tab-inset` | `42px` | Left offset of the tabs (keeps the spaces button clear) |
 | `--birdone-titlebar` | `#1f1f1f` | Grey of the message list and its header bar in dark mode |
+| `--birdone-attachment-height` | `160px` | Height cap of the attachment panel above the message body (`none` removes the cap) |
+
+Block 26 moves the attachment panel above the message body. Set
+`mailnews.attachments.display.start_expanded` to `true` in the config editor
+(Settings > General > Config Editor) to have the panel open by default. If you
+don't want the panel moved at all, comment the block out.
 
 The responsive breakpoint (850px) is hard-coded because media queries
 can't read CSS variables. To change it, adjust both `@media (min-width: 850px)`

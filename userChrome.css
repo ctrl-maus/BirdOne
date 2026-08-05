@@ -20,6 +20,7 @@
   --birdone-tab-share: 55%;    /* Share of the row used by the tabs */
   --birdone-row-height: 34px;  /* Height of the combined row */
   --birdone-tab-inset: 42px;   /* Tab offset from the left edge (room for the Spaces button) */
+  --birdone-attachment-height: 160px; /* Height cap of the attachment panel (block 26) */
 
   /* --birdone-accent: #fabd2f; */      /* Accent color - replaces the Windows accent color (blocks 4-6) */
   /* --birdone-accent-text: #1a1a1a; */ /* Text on accent surfaces (e.g. the "New Message" button) */
@@ -719,26 +720,46 @@ unified-toolbar {
 }
 
 /* --------------------------------------------------------------------------
-Moving attachment panel to the top between Message header and Message body.
-Moreover, if you want to make attachments more visible just set mailnews.attachments.display.start_expanded = true
-and attachment panel will be extented by default.
-----------------------------------------------------------------------------*/
+   26 | Attachment panel above the message body
+   #messagepanebox (about:message) is a XUL vbox, so its children are flex
+   items and can be reordered: header, attachment panel, message body.
+   Every child needs an explicit order - the implicit 0 would otherwise
+   decide where the notification bar, the splitter and the find bar end up.
+   #findToolbar is a lazy-findbar with display: contents and produces no
+   box of its own, so its order goes on the findbar it creates as a child;
+   the find bar is deliberately kept above the message body, grouped with
+   the attachment panel. The attachment splitter stays in the flow - it is
+   what produces the gap above the panel - but loses its grab behaviour: it
+   resolves resizebefore/resizeafter through DOM adjacency and would drag
+   the panes in the wrong direction after the reorder. Its collapsed state
+   is untouched, so a message without attachments reads as before. The
+   panel height is capped instead. Set
+   mailnews.attachments.display.start_expanded to open it by default.
+   Concept: @NeroWolfe75.
+   -------------------------------------------------------------------------- */
 #messagepanebox {
   display: flex !important;
   flex-direction: column !important;
 }
-#msgHeaderView {
-  order: 0 !important;
+
+#messagepanebox > #singleMessage         { order: 0 !important; }
+#messagepanebox > #mail-notification-top { order: 1 !important; }
+
+#messagepanebox > #attachment-splitter {
+  order: 2 !important;
+  pointer-events: none !important;
 }
-#attachmentView {
-  order: 1 !important;
-  max-height: 160px !important;
+
+#messagepanebox > #findToolbar > findbar { order: 3 !important; }
+
+#messagepanebox > #attachmentView {
+  order: 4 !important;
+  max-height: var(--birdone-attachment-height) !important;
   overflow: auto !important;
 }
-#messagebrowser,
-#messageContent,
-#messagepane {
-  order: 2 !important;
+
+#messagepanebox > #messagepane {
+  order: 5 !important;
   flex: 1 1 auto !important;
-  min-height: 100px !important;
+  min-height: 0 !important;
 }
